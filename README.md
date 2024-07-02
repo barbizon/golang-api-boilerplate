@@ -1,2 +1,2 @@
-# golang-api-boilerplate
-Boilerplate solution for golang API
+# GOLANG API Boilerplate solution
+ 
