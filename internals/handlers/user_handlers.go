@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"goHexagonalBlog/internals/core/ports"
+	"golangApiBoilerplate/internals/core/ports"
 	"log"
 	"time"
 )

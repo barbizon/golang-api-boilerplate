@@ -1,10 +1,10 @@
 package main
 
 import (
-	"goHexagonalBlog/internals/core/services"
-	"goHexagonalBlog/internals/handlers"
-	"goHexagonalBlog/internals/repositories"
-	"goHexagonalBlog/internals/server"
+	"golangApiBoilerplate/internals/core/services"
+	"golangApiBoilerplate/internals/handlers"
+	"golangApiBoilerplate/internals/repositories"
+	"golangApiBoilerplate/internals/server"
 )
 
 func main() {

@@ -2,8 +2,8 @@ package server
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"goHexagonalBlog/internals/core/ports"
-	"goHexagonalBlog/internals/middleware"
+	"golangApiBoilerplate/internals/core/ports"
+	"golangApiBoilerplate/internals/middleware"
 	"log"
 )
 

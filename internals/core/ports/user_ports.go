@@ -2,7 +2,7 @@ package ports
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"goHexagonalBlog/internals/core/domain"
+	"golangApiBoilerplate/internals/core/domain"
 )
 
 type IUserService interface {

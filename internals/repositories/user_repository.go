@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"goHexagonalBlog/internals/core/domain"
-	"goHexagonalBlog/internals/core/ports"
+	"golangApiBoilerplate/internals/core/domain"
+	"golangApiBoilerplate/internals/core/ports"
 )
 
 type UserRepository struct{}

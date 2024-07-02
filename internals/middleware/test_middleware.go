@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"goHexagonalBlog/internals/core/services"
+	"golangApiBoilerplate/internals/core/services"
 	"time"
 )
 
