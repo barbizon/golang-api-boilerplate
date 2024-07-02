@@ -2,18 +2,22 @@ package handlers
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"golangApiBoilerplate/internals/core/ports"
+	"golangApiBoilerplate/internals/core/services"
 	"log"
 	"time"
 )
 
 type UserHandlers struct {
-	userService ports.IUserService
+	userService services.IUserService
+}
+type IUserHandlers interface {
+	Get(c *fiber.Ctx) error
+	GetList(c *fiber.Ctx) error
 }
 
-var _ ports.IUserHandlers = (*UserHandlers)(nil)
+var _ IUserHandlers = (*UserHandlers)(nil)
 
-func NewUserHandlers(userService ports.IUserService) *UserHandlers {
+func NewUserHandlers(userService services.IUserService) *UserHandlers {
 	return &UserHandlers{
 		userService: userService,
 	}

@@ -2,16 +2,19 @@ package server
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"golangApiBoilerplate/internals/core/ports"
+	"golangApiBoilerplate/internals/handlers"
 	"golangApiBoilerplate/internals/middleware"
 	"log"
 )
 
+type IServer interface {
+	Initialize()
+}
 type Server struct {
-	userHandlers ports.IUserHandlers
+	userHandlers handlers.IUserHandlers
 }
 
-func NewServer(uHandlers ports.IUserHandlers) *Server {
+func NewServer(uHandlers handlers.IUserHandlers) *Server {
 	return &Server{
 		userHandlers: uHandlers,
 	}

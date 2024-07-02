@@ -2,12 +2,15 @@ package repositories
 
 import (
 	"golangApiBoilerplate/internals/core/domain"
-	"golangApiBoilerplate/internals/core/ports"
 )
 
+type IUserRepository interface {
+	Get(email string) (domain.User, error)
+	GetList() ([]domain.User, error)
+}
 type UserRepository struct{}
 
-var _ ports.IUserRepository = (*UserRepository)(nil)
+var _ IUserRepository = (*UserRepository)(nil)
 
 func NewUserRepository() (*UserRepository, error) {
 	return &UserRepository{}, nil

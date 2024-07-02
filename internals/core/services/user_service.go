@@ -2,17 +2,21 @@ package services
 
 import (
 	"golangApiBoilerplate/internals/core/domain"
-	"golangApiBoilerplate/internals/core/ports"
+	"golangApiBoilerplate/internals/repositories"
 )
 
+type IUserService interface {
+	Get(email string) (domain.User, error)
+	GetList() ([]domain.User, error)
+}
 type UserService struct {
-	userRepository ports.IUserRepository
+	userRepository repositories.IUserRepository
 }
 
 // This line is for get feedback in case we are not implementing the interface correctly
-var _ ports.IUserService = (*UserService)(nil)
+var _ IUserService = (*UserService)(nil)
 
-func NewUserService(repository ports.IUserRepository) *UserService {
+func NewUserService(repository repositories.IUserRepository) *UserService {
 	return &UserService{
 		userRepository: repository,
 	}
